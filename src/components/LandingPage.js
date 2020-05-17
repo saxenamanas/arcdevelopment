@@ -8,12 +8,14 @@ import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CallToAction from './ui/CallToAction';
 
 import animationData from './../animations/landinganimation/data';
 import customSoftware from '../assets/Custom Software Icon.svg';
 import mobileAppsIcon from '../assets/mobileIcon.svg'
 import websiteIcon from '../assets/websiteIcon.svg';
-import revolutionBack from '../assets/repeatingBackground.svg'
+import revolutionBack from '../assets/repeatingBackground.svg';
+import infoImg from '../assets/infoBackground.svg';
 
 
 const useStyles = makeStyles(theme=>({
@@ -94,6 +96,22 @@ const useStyles = makeStyles(theme=>({
     boxShadow: theme.shadows[10],
     padding: "10em",
     borderRadius: 15,
+  },
+  infoContainer:{
+    backgroundImage: `url(${infoImg})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "100%",
+    width: "100%",
+  },
+  infoBlock:{
+    height:"90em",
+  },
+  wrap:{
+    [theme.breakpoints.down("sm")]:{
+      textAlign:"center"
+    }
   }
 }));
 
@@ -225,6 +243,48 @@ const LandingPage = ()=>{
             </Card>
             <div className={classes.revolutionBlock} />
             </Grid>
+          </Grid>
+          <Grid item>
+              <Grid container direction="row" style={{height:"80em"}} alignItems="center">
+                <Grid style={{position:"absolute"}} item container>
+                <Grid style={{marginLeft:"8em"}} sm item>
+                <Grid container className={classes.wrap}  direction="column">
+                  <Typography variant="h2" style={{color:"white",fontFamily:"Raleway",marginRight:"2em"}}>
+                    About Us
+                  </Typography>
+                  <Typography variant="subtitle2" style={{color:"white",marginRigjt:"2em"}}>
+                    Click to get to know us better
+                  </Typography>
+                  <Grid item>
+                  <Button className={classes.learnMoreButton} style={{color:"white",borderColor:"white",marginTop:"1em"}} variant="outlined">
+                     <span style={{marginRight:10}}>Learn More</span>
+                      <ArrowButton height={15} width={15} fill={"white"}/>
+                    </Button>
+                  </Grid>
+                </Grid>
+                </Grid>
+                <Grid style={{marginRight:"8em"}}  sm item>
+                <Grid container className={classes.wrap} align="end" direction="column">
+                  <Typography variant="h2"  style={{color:"white",fontFamily:"Raleway",marginLeft:"2em"}}>
+                    Contact Us
+                  </Typography>
+                  <Typography variant="subtitle2" style={{color:"white"}}>
+                    Click to say Hello!
+                  </Typography>
+                  <Grid item>
+                  <Button className={classes.learnMoreButton} style={{color:"white",borderColor:"white",marginTop:"1em"}} variant="outlined">
+                     <span style={{marginRight:10}}>Learn More</span>
+                      <ArrowButton height={15} width={15} fill={"white"}/>
+                    </Button>
+                  </Grid>
+                </Grid>
+                </Grid>
+                </Grid>
+                <div className={classes.infoContainer}/>
+          </Grid>
+          </Grid>
+          <Grid item>
+            <CallToAction/>
           </Grid>
         </Grid>
       );
