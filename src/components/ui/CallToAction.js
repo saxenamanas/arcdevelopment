@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme=>({
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            height: "40em",
+            height: "60em",
             width: "100%",
             backgroundAttachment: "fixed"
           

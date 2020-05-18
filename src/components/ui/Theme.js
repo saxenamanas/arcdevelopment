@@ -47,9 +47,20 @@ export default createMuiTheme({
             color: arcBlue,
 
         },
+        h5:{
+            fontFamily:"Raleway",
+            fontSize: "1.75rem",
+            color: arcBlue,
+            fontWeight: 700
+        },
         subtitle1:{
             color: arcGrey,
             fontSize : "1.25rem",
+            fontWeight: 300
+        },
+        body1:{
+            color: arcGrey,
+            fontSize: "1.25rem",
             fontWeight: 300
         },
         learnButton:{
