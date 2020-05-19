@@ -10,6 +10,9 @@ import CallToAction from './ui/CallToAction';
 import forwardIcon from '../assets/forwardArrow.svg';
 import backwardIcon from '../assets/backArrow.svg';
 import integration from '../animations/integrationAnimation/data.json';
+import extendedAccess from '../assets/extendAccess.svg';
+import swiss from '../assets/swissKnife.svg';
+import engagement from '../assets/increaseEngagement.svg';
 
 const useStyles = makeStyles(theme=>({
     mainContainer:{
@@ -111,7 +114,7 @@ const AppDev = ()=>{
                         <Lottie options={integrationOptions} style={{maxHeight:500,maxWidth:275,minHeight:500}} />
                         </Grid>
                         <Grid item>
-                        <Grid container align="right" className={classes.headingData} direction="column">
+                        <Grid style={{marginBottom:"2em"}} container align="right" className={classes.headingData} direction="column">
                                 <Grid item>
                                 <Typography className={classes.heading} variant="h4">
                                 Simultaneous Platform Support
@@ -128,6 +131,51 @@ const AppDev = ()=>{
                             </Grid>
                         </Grid>
                     </Grid>
+                </Grid>
+                <Grid item>
+                    <Grid container style={{marginTop:"10em",marginBottom:"10em"}} justify="center" alignItems="center" direction="row">
+                        <Grid item sm>
+                            <Grid container justify="center" alignItems="center" direction="column">
+                                <Grid item>
+                                    <Typography variant="h4">
+                                        Extended Functionality
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <img src={swiss} alt="knife"></img>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item sm>
+                            <Grid container justify="center" alignItems="center" direction="column">
+                                <Grid style={{marginBottom:"2em"}} item>
+                                    <Typography variant="h4">
+                                        Extended Access
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <img src={extendedAccess} alt="knife"></img>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item sm>
+                            <Grid container justify="center" alignItems="center" direction="column">
+                                <Grid item>
+                                    <Typography variant="h4">
+                                        Extended Engagement
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <img src={engagement} alt="knife"></img>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid container direction="column">
+                <Grid item>
+                    <CallToAction></CallToAction>
                 </Grid>
             </Grid>
         </React.Fragment>
